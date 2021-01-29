@@ -1,0 +1,27 @@
+<script type="text/javascript" src="edgeglove.code.js"></script>
+<script type="text/javascript" src="edgeglove.word.js"></script>
+<script type="text/javascript" src="edgeglove.data_10.js"></script>
+
+<!DOCTYPE html>
+<html>
+<body><font face="Arial">
+<title>EDGE-ML Charades</title>
+<h2>EDGE-ML Charades</h2>
+<p>Click the button to enter the question words for EDGE-ML Charades.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var question = prompt("Please enter your clue words", "dog cat bird");
+  if (question != null) {
+	var vocab_max = 10;
+	var vocab_depth = 4;
+	result = edgegloveFreqWords(question, vocab_depth, vocab_max);
+	document.getElementById("demo").innerHTML = "<b>Question:</b><br>" + question + "<br><br><b>Answer:</b><br>" + result;
+  }
+}
+</script>
+
+</body>
+</html>

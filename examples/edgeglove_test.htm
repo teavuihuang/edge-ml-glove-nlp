@@ -1,0 +1,26 @@
+<script type="text/javascript" src="edgeglove.code.js"></script>
+<script type="text/javascript" src="edgeglove.word.js"></script>
+<script type="text/javascript" src="edgeglove.data_10.js"></script>
+<script>
+
+// Check if everthing is loaded
+document.writeln("edgeglove_data : " + edgeglove_data.length + "<br>");
+document.writeln("vocab_depth    : " + edgeglove_data[0].length + "<br>");
+document.writeln("<br>");
+
+classifier_list = ['anemone fish', 'sea anemone, anemonerock', 'rock beauty, Holocanthus tricolor', 'Christmans stocking', 'coral reef'];
+classifier_list = ['fireboat', 'lakeside, lakeshore', 'sandbar, sand bar', 'pier', 'lifeboat'];
+classifier_list = ['broccoli', 'cauliflower', 'head cabbage', 'spaghetti squash', 'zucchini, courgette'];
+classifier_list = ['scuba diver', 'tiger shark, Galeocendo cuvieri', 'great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias', 'sturgeon', 'killer whale, killer, orca, grampus, sea worf, Orcinus orca'];
+classifier_list = ['golden retriever', 'tibetan mastiff', 'labrador retriever', 'norfolk terrier', 'leonberg'];
+
+
+document.writeln("classifier_list: " + classifier_list + "<br><br>");
+
+var vocab_max = 10;
+for (var vocab_depth=2;vocab_depth<=10;vocab_depth=vocab_depth+1)
+{
+	result = edgegloveFreqWords(classifier_list, vocab_depth, vocab_max);
+	document.writeln("Depth " + vocab_depth + ": " + result + "<br>");
+}
+</script>
