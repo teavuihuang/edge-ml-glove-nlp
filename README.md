@@ -8,8 +8,13 @@ The data in this ML-Edge library is pre-computed using the 60,000 most frequentl
   
 [![](https://raw.githubusercontent.com/teavuihuang/edge-ml-glove-nlp/main/examples/TSNE_6K_Unfiltered_And_Filtered.png)](https://raw.githubusercontent.com/teavuihuang/edge-ml-glove-nlp/main/examples/TSNE_6K_Unfiltered_And_Filtered.png)
 
-TensorFlow suggests using a model that is of 30 MB in size or less in the browser. The NLP data in this ML-Edge library is customizable from 4-34 MB, depending on word-depth requirement from 10-100 of the most frequently used words of each vocabulary.
+TensorFlow suggests using a model that is of 30 MB in size or less in the browser. The NLP data in this ML-Edge library is customizable from 4-34 MB, depending on word-depth requirement from 10-100 of the most frequently used words of each vocabulary. To import the library, include the following lines in your client-side JavaScript code. The last line can be customized based on the search depth required, e.g. 'edgeglove.data_10.js' for up to 10 most-frequently used words, and 'edgeglove.data_100.js' for up to 100 most-frequently used words etc. 
 
+```javascript
+<script type="text/javascript" src="edgeglove.code.js"></script>
+<script type="text/javascript" src="edgeglove.word.js"></script>
+<script type="text/javascript" src="edgeglove.data_10.js"></script>
+```
 
 
 Edge-ML GloVe NLP with Tensorflow.js:  
