@@ -16,6 +16,16 @@ TensorFlow suggests using a model that is of 30 MB in size or less in the browse
 <script type="text/javascript" src="edgeglove.data_10.js"></script>
 ```
 
+The following code sample shows how the function is used. 'labels' is a string containing the words to query. 'vocab_depth' is the number of most frequently associated words to include in the search. 'vocab_max' parameter is the maximum number of words to return.
+
+```javascript
+var labels = "dog cat bird";
+var vocab_depth = 4;
+var vocab_max = 10;
+result = edgegloveFreqWords(labels, vocab_depth, vocab_max);
+// result = "pet,dogs,cat,cats,dog,birds,avian,flu"
+```
+
 
 Edge-ML GloVe NLP with Tensorflow.js:  
 [![](https://raw.githubusercontent.com/teavuihuang/edge-ml-glove-nlp/main/examples/edgeglove.png)](https://raw.githubusercontent.com/teavuihuang/edge-ml-glove-nlp/main/examples/edgeglove.png)
